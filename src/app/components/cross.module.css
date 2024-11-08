@@ -1,0 +1,19 @@
+
+.shape::before,
+.shape::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: var(--shape-width);
+    border-radius: var(--shape-width);
+    background-color: white;
+}
+
+.shape::before {
+    transform: rotate(35deg);
+}
+
+.shape::after {
+    transform: rotate(-35deg);
+}
+

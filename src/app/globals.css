@@ -5,6 +5,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --shape-width: 1em;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --shape-width: 0.5em;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,35 @@
+
+.grid {
+    transition: transform .3s ease-in-out;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        border: 1px solid white;
+        pointer-events: none;
+    }
+
+    &::before {
+        border-top: 0;
+        border-bottom: 0;
+        width: 33%;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &::after {
+        border-left: 0;
+        border-right: 0;
+        height: 33%;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    :global(._game-over) & {
+        transform: scale(0.5);
+    }
+}
