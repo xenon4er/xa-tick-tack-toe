@@ -4,9 +4,9 @@ import {Board, DifficultyLevel, DifficultyLevelMap, XPlayer, ZeroPlayer} from ".
 function evaluate(board: Board): number {
     const winner = getWinner(board).player;
     switch(winner) {
-        case 0:
-            return -10;
-        case 1:
+        case ZeroPlayer:
+            return - 10;
+        case XPlayer:
             return 10;
         default:
             return 0;
@@ -27,7 +27,7 @@ function minimax(board: Board, depth: number, isMax: boolean): number {
         for (let i = 0; i < board.length; i++) {
             if (board[i] === null) {
                 board[i] = XPlayer;
-                best = Math.max(best, minimax(board, depth + 1, !isMax));
+                best = Math.max(best, minimax(board, depth, !isMax));
                 board[i] = null;
             }
         }
@@ -37,7 +37,7 @@ function minimax(board: Board, depth: number, isMax: boolean): number {
         for (let i = 0; i < board.length; i++) {
             if (board[i] === null) {
                 board[i] = ZeroPlayer;
-                best = Math.min(best, minimax(board, depth + 1, !isMax));
+                best = Math.min(best, minimax(board, depth, !isMax));
                 board[i] = null;
             }
         }
