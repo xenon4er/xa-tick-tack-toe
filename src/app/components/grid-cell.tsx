@@ -15,7 +15,7 @@ export function GridCell({
     return (
         <div
             className={clsx(
-                "grid-cell flex flex-col aspect-square p-5 cursor-pointer transition hover:bg-neutral-200/10",
+                "grid-cell flex flex-col aspect-square p-5 cursor-pointer transition hover:bg-gray-400/10",
                 {
                     "opacity-10": isFaded,
                 }

@@ -18,7 +18,7 @@ function StatusPlayer({
             className={clsx(
                 "grid grid-cols-[repeat(2,1fr)] p-2 h-full rounded-xl items-center",
                 {
-                    "shadow-[0_0_10px_0_rgb(255,255,255)]": isActive,
+                    "shadow-[0_0_10px_0_currentColor]": isActive,
                 }
             )}
         >

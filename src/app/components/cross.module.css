@@ -6,7 +6,7 @@
     height: 100%;
     width: var(--shape-width);
     border-radius: var(--shape-width);
-    background-color: white;
+    background-color: currentColor;
 }
 
 .shape::before {

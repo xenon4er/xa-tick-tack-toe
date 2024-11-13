@@ -5,14 +5,14 @@
     &::before, &::after {
         content: "";
         position: absolute;
-        border: 1px solid white;
+        border: 2px solid currentColor;
         pointer-events: none;
     }
 
     &::before {
         border-top: 0;
         border-bottom: 0;
-        width: 33%;
+        width: 33.33333%;
         height: 100%;
         top: 0;
         left: 50%;
@@ -22,7 +22,7 @@
     &::after {
         border-left: 0;
         border-right: 0;
-        height: 33%;
+        height: 33.33333%;
         width: 100%;
         left: 0;
         top: 50%;
